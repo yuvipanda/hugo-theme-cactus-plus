@@ -5,8 +5,15 @@
             <li>
                 <a href='{{ .Permalink }}'><aside class="dates">{{ .Date.Format "Jan 2" }}</aside></a>
                 <a href='{{ .Permalink }}'>
-                    {{ .Title }} <h2>{{ .Description | markdownify }}</h2>
+                  {{ if .Site.Params.useDescriptionAsTitle }}
+    	                {{ .Description }}
+    	            {{ else }}
+                     {{ .Title }} <h2>{{ .Description | markdownify }}</h2>
+    	          	{{ end }}
                 </a>
+                <section id="summary">
+                    {{ .Summary }}
+                </section>
             </li>
         {{ end }}
     {{ end }}

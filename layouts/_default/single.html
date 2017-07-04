@@ -6,7 +6,11 @@
             <article class="post">
                 <header>
                     <h1>
-                        {{ .Title }}
+                        {{ if .Site.Params.useDescriptionAsTitle }}
+                            {{ .Description }}
+                        {{ else }}
+                            {{ .Title }}
+                        {{ end }}
                     </h1>
                     <h2 class="headline">
                     {{ .Date.Format "Jan 2, 2006 15:04" }}
