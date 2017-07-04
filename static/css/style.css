@@ -244,7 +244,7 @@ nav.main-nav a.cta {
 
 /*Accent color*/
 
-a, #title, #post-list a:hover, #post-list li:hover .dates, #title:hover {
+a, #title, #post-list a:hover, #title:hover {
     text-decoration: none;
     color: #5badf0;
     color: #5694f1;
@@ -800,7 +800,6 @@ h2.month {
     width: 60px;
     margin: 0;
     color: #8a8a8a;
-    cursor: pointer;
 }
 
 @media screen and (max-width: 768px) {
@@ -820,7 +819,7 @@ h2.month {
     color: #5694f1;
     transition: 0.3s ease-out;
 }
-.archive .post-item:hover .post-time,.archive .post-item:hover .post-link {
+.archive .post-item:hover .post-link {
     color: #5694f1;
 }
 
